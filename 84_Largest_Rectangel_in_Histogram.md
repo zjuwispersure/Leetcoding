@@ -47,7 +47,7 @@ public:
 
 ## 方法2:单调栈
 
-参考大神的思路，使用单调递增栈。
+参考大神的思路，使用[单调递增栈] https://github.com/zjuwispersure/Leetcoding/blob/master/MonotoneStack.md 。
 
 
 
