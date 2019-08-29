@@ -67,7 +67,7 @@ Monotone Stack(zz)
 这里提供一个递增的单调栈的图，元素依次为3，2，8，4，5，7，6，4
 注意看随着i的变化，栈中元素的变化。
 
-![monotone queue example 1](https://endlesslethe.com/wordpress/wp-content/uploads/2017/12/monotone-queue-example-1.png)
+![monotone queue example 1](./img/monostonestack_v1)
 
 
 
