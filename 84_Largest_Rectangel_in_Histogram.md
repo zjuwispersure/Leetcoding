@@ -49,6 +49,16 @@ public:
 
 参考大神的思路，使用[单调递增栈](https://github.com/zjuwispersure/Leetcoding/blob/master/MonotoneStack.md)。
 
+使用单调递增栈，遍历heights，
+
++ 如果heights[i]大于栈顶元素，符合单调递增栈的定义，入栈即可；
+
++ 如果heights[i]小于栈顶元素，则栈顶元素出栈，并计算面积，并更新最大面积；依次比较直到heights[i]大于栈顶元素，入栈。
+
+  有个trick是在最后添加一个0，这样最后可以将栈中所有元素都出栈来做比较。
+
+比较形象的是想象一个递增的阶梯，对于不满足递增关系的部分，则用不满足部分的面积来与最大面积做比较；
+
 
 
 ```C++
