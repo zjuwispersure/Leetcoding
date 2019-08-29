@@ -43,3 +43,38 @@ public:
 };
 ```
 
+
+
+## 方法2:单调栈
+
+参考大神的思路，使用单调递增栈。
+
+
+
+```C++
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& heights) {
+        stack<int> indexs;
+        int maxArea = 0;
+        heights.push_back(0);
+        for(int i = 0; i < heights.size(); i++){
+            while(!indexs.empty() && heights[indexs.top()] > heights[i]){
+                int h = heights[indexs.top()];
+                indexs.pop();
+                int index = indexs.empty()? -1:indexs.top();
+                maxArea = std::max(maxArea, h *(i - index - 1));
+                
+            }
+            indexs.push(i);
+        }
+        return maxArea;
+        
+    }
+};
+```
+
+
+
+
+
